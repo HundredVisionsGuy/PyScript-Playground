@@ -1,0 +1,14 @@
+{
+    "projects": [
+        {   "project_title": "first_project",
+            "project_filename": "first.html",
+            "project_description": "description goes here.",
+            "project_data": {}
+        },
+        {   "project_title": "second_project",
+            "project_filename": "second.html",
+            "project_description": "description goes here.",
+            "project_data": {}
+        }
+    ]
+}
