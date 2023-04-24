@@ -7,6 +7,7 @@ to the home page."""
 import json
 from pyodide.ffi import create_proxy
 from js import document
+from js import window
 
 
 # get the project data as a dict
@@ -18,3 +19,4 @@ def load_content(*args):
     
 document.getElementById('load_btn').addEventListener('click', load_content)    
 
+load_content()
