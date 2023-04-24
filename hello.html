@@ -4,44 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyScript Samples</title>
+    <title>Hello - from Pyscript docs</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <py-config>
-        [[fetch]] 
-        from = 'data/'
-        files = ['project_data.json']
-    </py-config>
-    <py-script src="./main.py"></py-script>
     <main>
         <header class="hero">
             <div class="hero-body">
-                <h1 class="title">Pyscript Playground</h1>
+                <h1 class="title">Pyscript Playground: Hello Pyscript!</h1>
                 <p class="subtitle is3">A testing grounds for <code>pyscript</code> experiements.</p>
             </div>
-            <button id="load_btn" onclick="load_content()">Load Content</button>
         </header>
-        <nav>
-            <ul>
-                <li><a id="hello"></a></li>
-            </ul>
-        </nav>
+        <nav></nav>
         <section class="section is-medium">
             <article id="about">
-                <h2>About this project</h2>
                 <p>Note: this home page is my first pyscript project: a website that uses <code>pyscript</code> to load content</p>
-            </article>
-            <article id="hello">
-                <h2 id="hello-title"></h2>
-                <p id="hello-description"></p>
             </article>
             
         </section>
     </main>
-    
 </body>
 </html>
