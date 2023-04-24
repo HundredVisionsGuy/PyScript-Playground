@@ -15,8 +15,15 @@ from js import window
 def load_content(*args):
     with open('project_data.json') as f:
         data = json.load(f)
+    projects = data.get('projects')
+    create_menu(projects)
     document.getElementById('hello').innerHTML = data['projects'][0].get("project_title")
+
+def create_menu(projects):
+    for project in projects:
+        title = project.get("project_title")
+        href = project.get("project_filename")
+        description = project.get("project_description")
     
-document.getElementById('load_btn').addEventListener('click', load_content)    
 
 load_content()
