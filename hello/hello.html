@@ -20,8 +20,15 @@
         </header>
         <nav></nav>
         <section class="section is-medium">
-            <article id="about">
-                <p>Note: this home page is my first pyscript project: a website that uses <code>pyscript</code> to load content</p>
+            <article id="hello">
+                <div id="manual-write"></div>
+                <button py-click="write_to_page()" id="manual">Say Hello</button>
+
+                <py-script>
+                    def write_to_page():
+                        manual_div = Element("manual-write")
+                        manual_div.element.innerText = "Hello World"
+                </py-script>
             </article>
             
         </section>
