@@ -16,14 +16,20 @@ def load_content(*args):
     with open('project_data.json') as f:
         data = json.load(f)
     projects = data.get('projects')
-    create_menu(projects)
-    document.getElementById('hello').innerHTML = data['projects'][0].get("project_title")
+    menu = create_menu(projects)
+    document.getElementById('hello').innerHTML = menu
 
 def create_menu(projects):
+    menu = "<ul>"
     for project in projects:
         title = project.get("project_title")
-        href = project.get("project_filename")
+        href = project.get("project_dir")
+        href += project.get("project_filename")
         description = project.get("project_description")
+        li = '<li><a href="' + href + '">' + title + '</a></li>'
+        menu += li 
+    menu += "</ul>"
+    return menu
     
 
 load_content()
