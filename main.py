@@ -20,12 +20,13 @@ def load_content(*args):
 
 
 def create_menu(projects):
-    menu = "<ul>"
+    menu = '<ul class="p-navigation__items">'
     for project in projects:
         title = project.get("project_title")
         href = project.get("project_dir")
         href += project.get("project_filename")
-        li = '<li><a href="' + href + '">' + title + "</a></li>"
+        li = '<li class="p-navigation__item"><a class="p-navigation__link"'
+        li += '" href="' + href + '">' + title + "</a></li>"
         menu += li
     menu += "</ul>"
     return menu
