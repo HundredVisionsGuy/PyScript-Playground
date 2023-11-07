@@ -22,12 +22,18 @@
         <section class="section is-medium">
             <article id="hello">
                 <div id="manual-write"></div>
-                <button py-click="write_to_page()" id="manual">Say Hello</button>
-
+                <button py-click="write_to_page('Hello dudes!')" id="manual">Say Hello</button>
+                <button py-click="clear_text('')" id="clear">Clear</button>
+                <button py-click="return_home()" id="home">Home</button>
                 <py-script>
-                    def write_to_page():
-                        manual_div = Element("manual-write")
-                        manual_div.element.innerText = "Hello World"
+                    from js import window
+                    manual_div = Element("manual-write")
+                    def write_to_page(text):
+                        manual_div.element.innerText = text
+                    def clear_text(text):
+                        manual_div.element.innerText = text
+                    def return_home():
+                        window.location.href = "../index.html"
                 </py-script>
             </article>
             

@@ -17,7 +17,7 @@ def auto_func(app, card):
     return "card3"
 
 
-# The templates for these cards can be found in index.html.
+# The templates for these cards can be found in pypercard.html.
 cards = [
     Card("card1", auto_advance=10, transition="card2"),
     Card("card2", auto_advance=20, transition=auto_func),
